@@ -10,8 +10,11 @@ public class EnquiryServiceImpl implements EnquiryService{
     @Autowired
     private EnquiryRepository enquiryRepository;
     @Override
-    public EnquiryModel getEnquiry(Long id) {
-        return null;
+    public boolean getEnquiry(String email) {
+        if(null!=enquiryRepository.findByEmail(email))
+        return false;
+        else
+        return true;
     }
 
     @Override

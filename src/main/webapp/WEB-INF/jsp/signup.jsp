@@ -22,7 +22,6 @@
                 top:20px;
                 left:450px;
                 width: 480px;
-                height: 600px;
                 overflow: hidden;
             }
             .titletext h4{
@@ -83,10 +82,10 @@
                                     path="email" required="true"></form:input>
                         </div> <!-- form-group// -->
 
-                        <div class="form-group input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"> <i class="fa fa-user"></i> </span>
-                            </div>
+                 <div class="form-group input-group">
+                       <div class="input-group-prepend">
+                         <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                         </div>
                         <form:select  class="form-control" path="roles" required="true">
                             <option value="">----Select----</option>
                             <option value="ROLE_TEACHER">TEACHER</option>

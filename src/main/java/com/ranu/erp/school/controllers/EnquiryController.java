@@ -18,13 +18,24 @@ public class EnquiryController {
     @RequestMapping(value = "/enquirypanel", method = RequestMethod.GET)
     public String displayLogin(Model model) {
         model.addAttribute("enquiry", new EnquiryModel());
+        model.addAttribute("errorenq","");
         return "enquiry";
     }
 
     @RequestMapping(value= "/enquiry", method = RequestMethod.POST)
     public ModelAndView enquiry(@ModelAttribute("enquiry") EnquiryModel enquiry) {
-            ModelAndView mv = new ModelAndView("enquiry");
-            enquiryService.addEnquiry(enquiry);
-            return mv;
+
+            if(enquiryService.getEnquiry(enquiry.getEmail())){
+                ModelAndView mv = new ModelAndView("enquiry");
+                enquiryService.addEnquiry(enquiry);
+                mv.addObject("enquiry",new EnquiryModel());
+                mv.addObject("errorenq","Success Submitted");
+                return mv;
+            }else{
+                ModelAndView mv = new ModelAndView("enquiry");
+                mv.addObject("errorenq","Email Already Exsist");
+                return mv;
+            }
+
     }
 }

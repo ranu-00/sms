@@ -168,7 +168,8 @@
                     <div class="form-group">
                         <button type="submit" name="Submit" id="loginbutton" class="btn btn-primary btn-block">Submit</button>
                         <button type="submit" name="Submit" id="loginbutton" class="btn btn-outline-danger btn-block"><a href="${pageContext.request.contextPath}/enquirypanel" id="loginbutton">Cancel</a></button>
-                    </div> <!-- form-group// -->      
+                   <c:out value="${errorenq}"/>
+                    </div> <!-- form-group// -->
                </form:form>
             </article>
         </div> <!-- card.// -->

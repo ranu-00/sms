@@ -4,7 +4,7 @@ import com.ranu.erp.school.entities.EnquiryModel;
 
 public interface EnquiryService {
 
-    public EnquiryModel getEnquiry(Long id);
+    public boolean getEnquiry(String email);
 
     public void addEnquiry(EnquiryModel enquiry);
 }
