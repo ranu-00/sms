@@ -18,7 +18,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Controller
@@ -36,7 +38,7 @@ public class UserController {
     
     @RequestMapping(value= "/reguser", method = RequestMethod.POST)
     public ModelAndView reguser(@ModelAttribute("urm") UserModel urm) {
-        Set<Role> roles = new HashSet<Role>();
+        List<Role> roles = new ArrayList<>();
         roles.add(new Role(urm.getRoles()));
         User urm1 = new User(urm.getEmail(),urm.getPassword(),urm.getName(),urm.getLastName(),urm.getUserPhone(), 1,roles);
         String result = us.insertUser(urm1);

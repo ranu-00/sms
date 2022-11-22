@@ -70,11 +70,11 @@
                     </span>-->
 					
                     
-                    <span><i class="fas fa-phone icon ico-phone5"></i><span class="title">Call Us :</span> 9661900 / 4360</span>
-                    <span><i class="fas fa-at icon ico-comment2"></i><span class="title">Support Email:</span><a href="#" style="text-transform: lowercase!important;"><a href="mailto:7college@du.ac.bd">7college@du.ac.bd</a></span>
+                    <span><i class="fas fa-phone icon ico-phone5"></i><span class="title">Call Us :</span> 8010580426</span>
+                    <span><i class="fas fa-at icon ico-comment2"></i><span class="title">Support Email:</span><a href="#" style="text-transform: lowercase!important;"><a href="mailto:snlrana65@gmail.com">snlrana65@gmail.com</a></span>
 					<a href="#" class="title">Course Syllabus </a>
 					&nbsp;&nbsp;
-					<a href="#" class="title" target="_blank"><span class="blink" style="padding:5px;">Online Form Fill-up</span> </a>
+					<a href="${pageContext.request.contextPath}/enquirypanel" class="title" target="_blank"><span class="blink" style="padding:5px;">Online Enquiry Form</span> </a>
 				
                 </div>
                     
@@ -122,7 +122,7 @@
         <div id="navigation_bar">
             <div class="content">
                 <div id="logo">
-                    <a href="http://7college.du.ac.bd">
+                    <a href="${pageContext.request.contextPath}/">
                         <img class="logo_dark" src="resources/images/du_logo_small-128.png" >
                         <img class="-logo_light" src="resources/images/logo_light-991.png" >
                     </a>
@@ -179,9 +179,6 @@
                       
                         <li></li>
                             <li><a href="${pageContext.request.contextPath}/login" class="title" target="_blank" style="height:20px; padding-bottom:5px;"><span class="blink">LOGIN</span> </a></li>
-                        <li></li>
-                       <li><a href="${pageContext.request.contextPath}/enquirypanel" style="height:20px; padding-bottom:5px;"><span class="blink">Enquiry</span> </a></li>
-
                         </ul>
                     </div>
                 </nav>

@@ -42,12 +42,9 @@ public class UserServiceImpl implements Userservice{
     private UserRepository userRepository;
     @Override
     public String insertUser(User u) {
-        Set<Role> rol =  new HashSet<>();
-        rol.add(new Role("ROLE_TEACHER"));
-
         String status;
         try {
-            userRepository.save(new User(u.getEmail(), bCryptPasswordEncoder.encode(u.getPassword()),u.getName(),u.getLastName(),u.getUserPhone(),1,rol));
+            userRepository.save(new User(u.getEmail(), bCryptPasswordEncoder.encode(u.getPassword()),u.getName(),u.getLastName(),u.getUserPhone(),1,u.getRoles()));
             status = "Success";
             //logger.info("End of insert user method in userservice impl");
         } catch (Exception e) {

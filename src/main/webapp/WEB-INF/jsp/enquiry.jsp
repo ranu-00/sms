@@ -133,11 +133,11 @@
                               <div class="input-group-prepend">
                                 <span class="input-group-text"> <i class="fa fa-user"></i> </span>
                               </div>
-                                                   <form:select  class="form-control" path="nationality" required="true">
-                                                       <option value="">----Select----</option>
-                                                       <option value="INDIAN">INDIAN</option>
-                                                       <option value="OTHERS">OTHERS</option>
-                                                   </form:select>
+                               <form:select  class="form-control" path="nationality" required="true">
+                                  <option value="">----Select----</option>
+                                  <option value="INDIAN">INDIAN</option>
+                                  <option value="OTHERS">OTHERS</option>
+                                </form:select>
                         </div>
                         <div class="form-group input-group">
                               <div class="input-group-prepend">
@@ -147,23 +147,21 @@
                                                             path="dob" required="true"></form:input>
                         </div>
                         <div class="form-group input-group">
-                              <div class="input-group-prepend">
-                                <span class="input-group-text"> <i class="fa fa-user"></i> </span>
-                              </div>
-                                     <form:select  class="form-control" path="status" required="true">
-                                          <option value="">----Select----</option>
-                                          <option value="INTERESTED">INTERESTED</option>
-                                          <option value="CONFIRM">CONFIRM</option>
-                                          <option value="REJECTED">REJECTED</option>
-                                       </form:select>
+                          <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+                           </div>
+                           <form:input type="text" class="form-control" placeholder="Email Address"
+                                                                path="email" required="true"></form:input>
                         </div>
                         <div class="form-group input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
-                            </div>
-                        <form:input type="text" class="form-control" placeholder="Email Address"
-                                    path="email" required="true"></form:input>
-                        </div> <!-- form-group// -->
+                              <label>INTERESTED</label>
+                              <form:radiobutton class="form-control" path="status" value="INTERESTED" name="f1"/>
+                              <label>CONFIRM</label>
+                              <form:radiobutton class="form-control" path="status" value="CONFIRM" name="f1"/>
+                               <label>REJECTED</label>
+                              <form:radiobutton class="form-control" path="status" value="REJECTED" name="f1"/>
+                       </div>
+                     <!-- form-group// -->
                                
                     <div class="form-group">
                         <button type="submit" name="Submit" id="loginbutton" class="btn btn-primary btn-block">Submit</button>
