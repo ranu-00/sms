@@ -27,11 +27,11 @@
     <body>
         <div class="container-scroller">
             <!-- partial:partials/_navbar.html -->
-            <jsp:include page="./partial/teacher/topnav.jsp"></jsp:include>
+            <jsp:include page="./partial/admin/topnav.jsp"></jsp:include>
             <!-- partial -->
             <div class="container-fluid page-body-wrapper">
                 <!-- partial:partials/_sidebar.html -->
-                <jsp:include page="./partial/teacher/sidebar.jsp"></jsp:include>
+                <jsp:include page="./partial/admin/sidebar.jsp"></jsp:include>
                     <!-- partial -->
                     <div class="main-panel">
                         <div class="content-wrapper">

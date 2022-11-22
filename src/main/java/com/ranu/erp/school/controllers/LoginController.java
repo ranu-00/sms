@@ -3,6 +3,7 @@ package com.ranu.erp.school.controllers;
 
 
 import com.ranu.erp.school.entities.User;
+import com.ranu.erp.school.model.MarksCart;
 import com.ranu.erp.school.services.TeacherinfoService;
 import com.ranu.erp.school.services.Userservice;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpSession;
+import java.util.ArrayList;
 import java.util.Collection;
 
 
@@ -40,7 +42,6 @@ public class LoginController {
 
     @RequestMapping(value = "/loginsuccess")
     public String loginsuccess(HttpSession session) {
-        System.out.println("success..........");
         String userid = SecurityContextHolder.getContext().getAuthentication().getName();;
         User us = user.viewUser(userid);
         Collection<GrantedAuthority> authorities = (Collection<GrantedAuthority>) SecurityContextHolder.getContext().getAuthentication().getAuthorities();
@@ -55,7 +56,7 @@ public class LoginController {
                 session.setAttribute("Userphone", us.getUserPhone());
                 session.setAttribute("email", us.getEmail());
                 session.setAttribute("UserId", userid);
-               // session.setAttribute("markCart", new ArrayList<MarksCart>());
+                session.setAttribute("markCart", new ArrayList<MarksCart>());
                 page = "redirect:/adminpanel";
             } else if (authority.getAuthority().equals(rolet)) {
                 session.setAttribute("UserLoggedIn", us.getName());

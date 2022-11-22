@@ -34,5 +34,8 @@ public class SchoolErpApplication implements CommandLineRunner {
 		rol.add(new Role("ROLE_TEACHER"));
 		userRepository.save(new User("sunil@gmail.com", bCryptPasswordEncoder.encode("password"),"sunil","rana","801050426",1,rol));
 		//roleRepository.save(new Role("ROLE_TEACHER"));
+		rol.clear();
+		rol.add(new Role("ROLE_ADMIN"));
+		userRepository.save(new User("admin@gmail.com", bCryptPasswordEncoder.encode("password"),"sunil","rana","801050426",1,rol));
 	}
 }
