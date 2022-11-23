@@ -19,7 +19,10 @@ public class ClassnameServiceImpl implements ClassnameService{
     }
 
     @Override
-    public Classname updateClassname(Classname sub) {
+    public Classname updateClassname(Classname sub1) {
+        Classname sub = classnameRepository.findById(sub1.getClassid()).get();
+        sub.setClassname(sub1.getClassname());
+        sub.setStatus(sub1.getStatus());
         return classnameRepository.save(sub);
     }
 
