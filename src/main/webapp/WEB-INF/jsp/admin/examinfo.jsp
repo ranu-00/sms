@@ -8,7 +8,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Exam Information Page</title>
         <script src="resources/js/angular.min.js" type="text/javascript"></script>
-        <jsp:include page="/WEB-INF/views/partial/head.jsp"></jsp:include>
+        <jsp:include page="../partial/head.jsp"></jsp:include>
             <!-- inject:css -->
             <link rel="stylesheet" href="resources/css/style.css">
             <link href="resources/css/customstyle.css" rel="stylesheet" type="text/css"/>
@@ -28,11 +28,11 @@
     <body ng-app="myApp">
         <div class="container-scroller">
             <!-- partial:partials/_navbar.html -->
-            <jsp:include page="/WEB-INF/views/partial/topnav.jsp"></jsp:include>
+            <jsp:include page="../partial/topnav.jsp"></jsp:include>
                 <!-- partial -->
                 <div class="container-fluid page-body-wrapper">
                     <!-- partial:partials/_sidebar.html -->
-                <jsp:include page="/WEB-INF/views/partial/admin/sidebar.jsp"></jsp:include>
+                <jsp:include page="../partial/admin/sidebar.jsp"></jsp:include>
                     <!-- partial -->
                     <div class="main-panel">
                         <div class="content-wrapper">
@@ -138,7 +138,7 @@
                     </div>
                     <!-- content-wrapper ends -->
                     <!-- partial:partials/_footer.html -->
-                    <jsp:include page="/WEB-INF/views/partial/footer.jsp"></jsp:include>
+                    <jsp:include page="../partial/footer.jsp"></jsp:include>
                         <!-- partial -->
                     </div>
                     <!-- main-panel ends -->
@@ -147,7 +147,7 @@
             </div>
             <!-- container-scroller -->
 
-        <jsp:include page="/WEB-INF/views/partial/jsinclude.jsp"></jsp:include>
+        <jsp:include page="../partial/jsinclude.jsp"></jsp:include>
 
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>

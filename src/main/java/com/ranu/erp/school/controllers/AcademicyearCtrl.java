@@ -40,12 +40,12 @@ public class AcademicyearCtrl {
         sub.updateAcademicyear(s);
         return "redirect:/showingacademicyearpage";
     }
-
+/*
     @RequestMapping("removesubject/{Id}")
-    public String removesubject(@PathVariable("Id") int subId) {
+    public String removesubject1(@PathVariable("Id") int subId) {
         sub.deleteAcademicyear(subId);
         return "redirect:/showingacademicyearpage";
-    }
+    }*/
 
     @RequestMapping("/editacademicyearbutton")
     public ModelAndView passingonesubject(@RequestParam("getYearid") int yearid) {

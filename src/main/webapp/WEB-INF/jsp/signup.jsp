@@ -86,11 +86,11 @@
                        <div class="input-group-prepend">
                          <span class="input-group-text"> <i class="fa fa-user"></i> </span>
                          </div>
-                        <form:select  class="form-control" path="roles" required="true">
+                        <form:select  class="form-control" path="role" required="true">
                             <option value="">----Select----</option>
-                            <option value="ROLE_TEACHER">TEACHER</option>
-                            <option value="ROLE_STUDENT">STUDENT</option>
-                            <option value="ROLE_GUARDIAN">GUARDIAN</option>
+                            <option value="2">TEACHER</option>
+                            <option value="3">STUDENT</option>
+                            <option value="4">GUARDIAN</option>
                         </form:select>
                     </div> <!-- form-group end.// -->
                                

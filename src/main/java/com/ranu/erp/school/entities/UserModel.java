@@ -1,6 +1,9 @@
 package com.ranu.erp.school.entities;
 
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class UserModel {
     private Long id;
     private String email;
@@ -9,16 +12,15 @@ public class UserModel {
     private String lastName;
     private String userPhone;
 
-    private String roles;
+    private Integer role;
 
-    public UserModel(String email, String password, String name, String lastName, String userPhone,  String roles) {
+      public UserModel(String email, String password, String name, String lastName, String userPhone, int role) {
         this.email = email;
         this.password = password;
         this.name = name;
         this.lastName = lastName;
         this.userPhone = userPhone;
-
-        this.roles = roles;
+        this.role = role;
     }
 
     public Long getId() {
@@ -69,11 +71,11 @@ public class UserModel {
         this.userPhone = userPhone;
     }
 
-    public String getRoles() {
-        return roles;
+    public Integer getRole() {
+        return role;
     }
 
-    public void setRoles(String roles) {
-        this.roles = roles;
+    public void setRole(Integer role) {
+        this.role = role;
     }
 }

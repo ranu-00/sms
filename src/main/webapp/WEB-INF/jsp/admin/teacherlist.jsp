@@ -11,7 +11,7 @@
         <title>Teacher List</title>
         <!--Angular Js-->
         <script src="resources/js/angular.min.js" type="text/javascript"></script>
-        <jsp:include page="/WEB-INF/views/partial/head.jsp"></jsp:include>
+        <jsp:include page="../partial/head.jsp"></jsp:include>
             <!-- inject:css -->
 
             <link href="resources/css/all.css" rel="stylesheet" type="text/css"/>
@@ -43,11 +43,11 @@
     <body ng-app="myApp" ng-controller="teacherListCtrl">
         <div class="container-scroller">
             <!-- partial:partials/_navbar.html -->
-            <jsp:include page="/WEB-INF/views/partial/topnav.jsp"></jsp:include>
+            <jsp:include page="../partial/topnav.jsp"></jsp:include>
                 <!-- partial -->
                 <div class="container-fluid page-body-wrapper">
                     <!-- partial:partials/_sidebar.html -->
-                <jsp:include page="/WEB-INF/views/partial/admin/sidebar.jsp"></jsp:include>
+                <jsp:include page="../partial/admin/sidebar.jsp"></jsp:include>
                     <!-- partial -->
                     <div class="main-panel">
                         <div class="content-wrapper">
@@ -98,7 +98,7 @@
                         </div>
                         <!-- content-wrapper ends -->
                         <!-- partial:partials/_footer.html -->
-                    <jsp:include page="/WEB-INF/views/partial/footer.jsp"></jsp:include>
+                    <jsp:include page="../partial/footer.jsp"></jsp:include>
                         <!-- partial -->
                     </div>
                     <!-- main-panel ends -->
@@ -107,7 +107,7 @@
             </div>
             <!-- container-scroller -->
 
-        <jsp:include page="/WEB-INF/views/partial/jsinclude.jsp"></jsp:include>
+        <jsp:include page="../partial/jsinclude.jsp"></jsp:include>
     </body>
 
 </html>

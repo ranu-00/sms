@@ -9,7 +9,7 @@
         <title>Student Information Page</title>
         <!--Angular Js-->
         <script src="resources/js/angular.min.js" type="text/javascript"></script>
-        <jsp:include page="/WEB-INF/views/partial/head.jsp"></jsp:include>
+        <jsp:include page="../partial/head.jsp"></jsp:include>
             <!-- inject:css -->
             <link rel="stylesheet" href="resources/css/style.css">
             <link href="resources/css/customstyle.css" rel="stylesheet" type="text/css"/>
@@ -28,11 +28,11 @@
     <body ng-app="mystudent" ng-controller="studentController">
         <div class="container-scroller">
             <!-- partial:partials/_navbar.html -->
-            <jsp:include page="/WEB-INF/views/partial/topnav.jsp"></jsp:include>
+            <jsp:include page="../partial/topnav.jsp"></jsp:include>
                 <!-- partial -->
                 <div class="container-fluid page-body-wrapper">
                     <!-- partial:partials/_sidebar.html -->
-                <jsp:include page="/WEB-INF/views/partial/admin/sidebar.jsp"></jsp:include>
+                <jsp:include page="../partial/admin/sidebar.jsp"></jsp:include>
                     <!-- partial -->
                     <div class="main-panel">
                         <div class="content-wrapper">
@@ -43,7 +43,7 @@
                                             <center><span class="card-title title-text"><h4>Add Student information</h4></span></center>
                                             <div class="box">
                                             <c:if test="${check}">
-                                                <form:form commandName="addStuObject1" action="addingstudent"
+                                                <form:form modelAttribute="addStuObject1" action="addingstudent"
                                                            enctype="multipart/form-data" >
 
                                                     <div class="form-group input-field col s6" >
@@ -118,7 +118,7 @@
                                                 </form:form>
                                             </c:if>
                                             <c:if test="${!check}">
-                                                <form:form commandName="addStuObject1" action="addingstudent"
+                                                <form:form modelAttribute="addStuObject1" action="addingstudent"
                                                            enctype="multipart/form-data">
 
                                                     <div class="form-group input-field col s6">
@@ -251,7 +251,7 @@
                     </div>
                     <!-- content-wrapper ends -->
                     <!-- partial:partials/_footer.html -->
-                    <jsp:include page="/WEB-INF/views/partial/footer.jsp"></jsp:include>
+                    <jsp:include page="../partial/footer.jsp"></jsp:include>
                         <!-- partial -->
                     </div>
                     <!-- main-panel ends -->
@@ -260,7 +260,7 @@
             </div>
             <!-- container-scroller -->
 
-        <jsp:include page="/WEB-INF/views/partial/jsinclude.jsp"></jsp:include>
+        <jsp:include page="../partial/jsinclude.jsp"></jsp:include>
 
 
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>

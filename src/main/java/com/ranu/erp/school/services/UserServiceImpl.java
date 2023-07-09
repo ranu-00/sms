@@ -44,7 +44,7 @@ public class UserServiceImpl implements Userservice{
     public String insertUser(User u) {
         String status;
         try {
-            userRepository.save(new User(u.getEmail(), bCryptPasswordEncoder.encode(u.getPassword()),u.getName(),u.getLastName(),u.getUserPhone(),1,u.getRoles()));
+            userRepository.save(new User(u.getEmail(), bCryptPasswordEncoder.encode(u.getPassword()),u.getName(),u.getLastName(),u.getUserPhone(),1,u.getRole()));
             status = "Success";
             //logger.info("End of insert user method in userservice impl");
         } catch (Exception e) {

@@ -9,6 +9,7 @@ import org.hibernate.validator.constraints.Length;
 import org.springframework.stereotype.Component;
 
 
+import java.io.Serializable;
 import java.math.BigInteger;
 import java.util.List;
 import java.util.Set;
@@ -16,10 +17,10 @@ import java.util.Set;
 
 @Entity
 @Table(name = "user")
-public class User {
+public class User implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "user_id")
     private Long id;
 
@@ -46,21 +47,20 @@ public class User {
     @Column(name = "active")
     private int active;
 
-    @ManyToMany(cascade = CascadeType.ALL)
-    @JoinTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
-    private List<Role> roles;
+    @Column(name = "role")
+    private Integer role;
     public User() {
 
     }
 
-    public User(String email, String password, String name, String lastName, String userPhone, int active, List<Role> roles) {
+    public User(String email, String password, String name, String lastName, String userPhone, int active, int role) {
         this.email = email;
         this.password = password;
         this.name = name;
         this.lastName = lastName;
         this.userPhone = userPhone;
         this.active = active;
-        this.roles = roles;
+        this.role = role;
     }
 
     public String getUserPhone() {
@@ -119,11 +119,11 @@ public class User {
         this.active = active;
     }
 
-    public List<Role> getRoles() {
-        return roles;
+    public Integer getRole() {
+        return role;
     }
 
-    public void setRoles(List<Role> roles) {
-        this.roles = roles;
+    public void setRole(Integer role) {
+        this.role = role;
     }
 }

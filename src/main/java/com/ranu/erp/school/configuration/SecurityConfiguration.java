@@ -44,6 +44,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter
 
         http.authorizeRequests()
                 .antMatchers("/").permitAll()
+                .antMatchers("/rest/**").permitAll()
                 //.antMatchers("/resources/**").permitAll()
                 .antMatchers("/enquirypanel").permitAll()
                 .antMatchers("/teacherpanel").access("hasRole('ROLE_TEACHER')")

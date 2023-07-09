@@ -38,9 +38,7 @@ public class UserController {
     
     @RequestMapping(value= "/reguser", method = RequestMethod.POST)
     public ModelAndView reguser(@ModelAttribute("urm") UserModel urm) {
-        List<Role> roles = new ArrayList<>();
-        roles.add(new Role(urm.getRoles()));
-        User urm1 = new User(urm.getEmail(),urm.getPassword(),urm.getName(),urm.getLastName(),urm.getUserPhone(), 1,roles);
+        User urm1 = new User(urm.getEmail(),urm.getPassword(),urm.getName(),urm.getLastName(),urm.getUserPhone(), 1,urm.getRole());
         String result = us.insertUser(urm1);
 
         if (result.equalsIgnoreCase("success")) {

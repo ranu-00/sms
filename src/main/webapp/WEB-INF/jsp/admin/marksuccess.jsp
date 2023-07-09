@@ -8,7 +8,7 @@
         <title>Exam Marks Page</title>
         <!--Angular Js-->
         <script src="resources/js/angular.min.js" type="text/javascript"></script>
-        <jsp:include page="/WEB-INF/views/partial/head.jsp"></jsp:include>
+        <jsp:include page="../partial/head.jsp"></jsp:include>
             <!-- inject:css -->
             <link rel="stylesheet" href="resources/css/style.css">
             
@@ -98,7 +98,7 @@
         </div>
 
 
-        <jsp:include page="/WEB-INF/views/partial/jsinclude.jsp"></jsp:include>
+        <jsp:include page="../partial/jsinclude.jsp"></jsp:include>
 
     </body>
 </html>
